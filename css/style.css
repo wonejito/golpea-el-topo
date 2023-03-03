@@ -1,4 +1,54 @@
-html {
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+* {
 	margin: 0;
 	padding: 0;
+	font-family: "Special Elite", cursive;
+}
+body {
+	min-width: 100vw;
+	height: 100vh;
+	background: url(../images/grass.jpg);
+	background-size: contain;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#title {
+	display: flex;
+	justify-content: center;
+}
+#title h1 {
+	font-size: 15px;
+	margin-top: 2px;
+	background: url(../images/dirty-texture.jpg);
+	background-size: contain;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+#container {
+	display: grid;
+	border: 2px solid white;
+	width: 90vw;
+	height: 100px;
+	justify-content: center;
+	grid-template-columns: 1fr 2fr 1fr;
+}
+.child {
+	border: 1px solid yellow;
+	border-collapse: collapse;
+}
+
+#dirty {
+	background: url(../images/dirty-texture.jpg);
+	background-size: contain;
+	opacity: 0.81;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.topsquare {
+	border: 1px solid pink;
 }
