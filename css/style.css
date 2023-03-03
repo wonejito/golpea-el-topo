@@ -51,4 +51,11 @@ body {
 
 .toposquare {
 	border: 1px solid pink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+:only-child {
+	flex-shrink: 2;
 }
