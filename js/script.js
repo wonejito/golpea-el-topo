@@ -7,30 +7,26 @@ let topo = document.createElement("img");
 topo.src = "/images/red-dot.png";
 topo.style.cssText = "width: 0.9em; height; 0.9em";
 
-// toposquare.forEach((cuadro) => {
-// 	cuadro.addEventListener("click", function () {
-// 		topoAttack(this);
-// 	});
-// });
-
-// function topoAttack(elemnt) {
-// 	elemnt.appendChild(topo);
-// }
-
-let letsPlay = setInterval(function () {
-	topoAppears(toposquare);
-}, 2000);
-
 start.addEventListener("click", function () {
-	letsPlay;
-});
+	let rndmTime = Math.floor(Math.random() * 5000);
+	let letsPlay = setInterval(function () {
+		topoAppears(toposquare);
+	}, 1000);
 
-stop.addEventListener("click", function () {
-	clearTimeout(letsPlay);
+	stop.addEventListener("click", function () {
+		clearTimeout(letsPlay);
+	});
 });
 
 function topoAppears(item) {
 	item = [...item];
 	let random = Math.floor(Math.random() * item.length);
-	item[random].appendChild(topo);
+	randomArray = ["center", "flex-end", "flex-start"];
+
+	// frstPrprty = randomArray(Math.floor(Math.random() * randomArray.length));
+	// scndPrprty = randomArray(Math.floor(Math.random() * randomArray.length));
+
+	topoDaddy = item[random];
+	// topoDaddy.style.cssText = `display: flex; justify-content: ${frstPrprty}; align-items: ${scndPrprty};`;
+	topoDaddy.appendChild(topo);
 }
